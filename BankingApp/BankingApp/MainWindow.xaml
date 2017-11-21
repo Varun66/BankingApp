@@ -11,5 +11,25 @@
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
         <TextBox HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Welcome to PIaVE Bank" VerticalAlignment="Top" Width="295" Margin="114,127,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
+        <Button x:Name="Insert_Card_U1_Pass" Content="Insert Card User 1 Pass" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="109" Height="29" FontSize="9" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="Insert_Card_U1_Fail" Content="Insert Card User 1 Fail" HorizontalAlignment="Left" Margin="142,268,0,0" VerticalAlignment="Top" Width="109" Height="29" FontSize="9" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="Insert_Card_U2_Pass" Content="Insert Card User 2 Pass" HorizontalAlignment="Left" Margin="272,268,0,0" VerticalAlignment="Top" Width="109" Height="29" FontSize="9" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="Insert_Card_U2_Fail" Content="Insert Card User 2 Fail" HorizontalAlignment="Left" Margin="400,268,0,0" VerticalAlignment="Top" Width="109" Height="29" FontSize="9" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>
