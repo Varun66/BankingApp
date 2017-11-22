@@ -31,37 +31,37 @@
                 <ColumnDefinition Width="78*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Grid.Row="0">
-                <Button Margin="0,0,0,0.2" ClickMode="Press" Click="click_button">1</Button>
+                <Button Margin="0,0,0,0.2" ClickMode="Press" Click="Button_click">1</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="0">
-                <Button ClickMode="Press" Click="click_button">2</Button>
+                <Button ClickMode="Press" Click="Button_click">2</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="0">
-                <Button Height="39" Margin="0,0,-0.2,0" VerticalAlignment="Top" ClickMode="Press" Click="click_button">3</Button>
+                <Button Height="39" Margin="0,0,-0.2,0" VerticalAlignment="Top" ClickMode="Press" Click="Button_click">3</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="0">
                 <Button Background="#FFE81818" FontWeight="Bold" Click="Cancel_click">Cancel</Button>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1">
-                <Button Height="39" Margin="0,0,0,0.2" VerticalAlignment="Bottom" Click="click_button">4</Button>
+                <Button Height="39" Margin="0,0,0,0.2" VerticalAlignment="Bottom" Click="Button_click">4</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1">
-                <Button Click="click_button">5</Button>
+                <Button Click="Button_click">5</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button ClickMode="Press" Click="click_button">6</Button>
+                <Button ClickMode="Press" Click="Button_click">6</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="1">
                 <Button Background="#FFEBF413" FontWeight="Bold" Click="Correction_click">Correction</Button>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="2">
-                <Button ClickMode="Press" Click="click_button">7</Button>
+                <Button ClickMode="Press" Click="Button_click">7</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2">
-                <Button Click="click_button">8</Button>
+                <Button Click="Button_click">8</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="2">
-                <Button ClickMode="Press" Click="click_button">9</Button>
+                <Button ClickMode="Press" Click="Button_click">9</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -71,13 +71,13 @@
                 <Button IsEnabled="false" Grid.ColumnSpan="2" Margin="0,0,0.4,0.2" BorderBrush="#FFDDDDDD" Background="#FF919191"></Button>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="3">
-                <Button Click="click_button">*</Button>
+                <Button Click="Button_click">*</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="3">
-                <Button Click="click_button">0</Button>
+                <Button Click="Button_click">0</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="3">
-                <Button ClickMode="Press" Click="click_button">#</Button>
+                <Button ClickMode="Press" Click="Button_click">#</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="3">
                 <Button Background="#FF5CDA23" FontWeight="Bold" ClickMode="Press" Click="Confirm_click">Confirm</Button>

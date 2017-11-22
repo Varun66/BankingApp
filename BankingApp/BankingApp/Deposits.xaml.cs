@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for Account_Management.xaml
+    /// Interaction logic for Deposits.xaml
     /// </summary>
-    public partial class Account_Management : Page
+    public partial class Deposits : Page
     {
-        public Account_Management()
+        public Deposits()
         {
             InitializeComponent();
-        }
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            Welcome_Page p1 = new Welcome_Page();
-            this.NavigationService.Navigate(p1);
         }
     }
 }

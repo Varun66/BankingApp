@@ -16,24 +16,13 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CheckBalance.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CheckBalance : Page
     {
-        public MainWindow()
+        public CheckBalance()
         {
             InitializeComponent();
-
-            WelcomePage p1 = new WelcomePage();
-
-            //Account_Management p2 = new Account_Management();
-            myFrame.NavigationService.Navigate(p1);
-            this.SizeToContent = SizeToContent.WidthAndHeight;
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

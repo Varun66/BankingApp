@@ -16,29 +16,32 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for Pin_Error.xaml
+    /// Interaction logic for Welcome_Page.xaml
     /// </summary>
-    public partial class Pin_Error : Page
+    public partial class WelcomePage : Page
     {
-        public Pin_Error()
+        public WelcomePage()
         {
             InitializeComponent();
         }
+
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            e.Handled = true;
+
         }
 
-        private void Return_click(object sender, RoutedEventArgs e)
+        private void Insert_Card_U1_Pass_Click(object sender, RoutedEventArgs e)
         {
-            SwipeFail p1 = new SwipeFail();
-            this.NavigationService.Navigate(p1);
-        }
-
-        private void Exit_click(object sender, RoutedEventArgs e)
-        {
-            Welcome_Page p2 = new Welcome_Page();
+            AccountManagement p2 = new AccountManagement();
             this.NavigationService.Navigate(p2);
+            
+            
+        }
+
+        private void Insert_Card_U1_Fail_Click(object sender, RoutedEventArgs e)
+        {
+            SwipeFail p3 = new SwipeFail();
+            this.NavigationService.Navigate(p3);
         }
     }
 }

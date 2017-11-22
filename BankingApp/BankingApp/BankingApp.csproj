@@ -54,16 +54,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Pin_Error.xaml.cs">
-      <DependentUpon>Pin_Error.xaml</DependentUpon>
+    <Compile Include="ActionAccount.xaml.cs">
+      <DependentUpon>ActionAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PinError.xaml.cs">
+      <DependentUpon>PinError.xaml</DependentUpon>
     </Compile>
     <Compile Include="SwipeFail.xaml.cs">
       <DependentUpon>SwipeFail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Welcome_Page.xaml.cs">
-      <DependentUpon>Welcome_Page.xaml</DependentUpon>
+    <Compile Include="WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
     </Compile>
-    <Page Include="Account_Management.xaml">
+    <Page Include="AccountManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ActionAccount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -71,8 +78,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Account_Management.xaml.cs">
-      <DependentUpon>Account_Management.xaml</DependentUpon>
+    <Compile Include="AccountManagement.xaml.cs">
+      <DependentUpon>AccountManagement.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -82,7 +89,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pin_Error.xaml">
+    <Page Include="PinError.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,7 +97,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Welcome_Page.xaml">
+    <Page Include="WelcomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

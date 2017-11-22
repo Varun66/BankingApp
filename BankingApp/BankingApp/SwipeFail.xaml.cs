@@ -33,11 +33,11 @@ namespace BankingApp
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Welcome_Page p1 = new Welcome_Page();
+            WelcomePage p1 = new WelcomePage();
             this.NavigationService.Navigate(p1);
         }
 
-        private void click_button(object sender, RoutedEventArgs e)
+        private void Button_click(object sender, RoutedEventArgs e)
         {
            
             Button button = (Button)sender;
@@ -58,13 +58,13 @@ namespace BankingApp
         {
             if (textbox_pin.Text.Equals("1234"))
             {
-                Account_Management p2 = new Account_Management();
-                this.NavigationService.Navigate(p2);
+                AccountManagement p1 = new AccountManagement();
+                this.NavigationService.Navigate(p1);
             }
             else
             {
-                Pin_Error p3 = new Pin_Error();
-                this.NavigationService.Navigate(p3);
+                PinError p2 = new PinError();
+                this.NavigationService.Navigate(p2);
             }
         }
 
