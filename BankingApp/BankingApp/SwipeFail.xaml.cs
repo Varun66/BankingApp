@@ -16,32 +16,26 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for Welcome_Page.xaml
+    /// Interaction logic for SwipeFail.xaml
     /// </summary>
-    public partial class Welcome_Page : Page
+    public partial class SwipeFail : Page
     {
-        public Welcome_Page()
+        public SwipeFail()
         {
             InitializeComponent();
         }
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void Insert_Card_U1_Pass_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Account_Management p2 = new Account_Management();
-            this.NavigationService.Navigate(p2);
-            
-            
-        }
-
-        private void Insert_Card_U1_Fail_Click(object sender, RoutedEventArgs e)
-        {
-            SwipeFail p3 = new SwipeFail();
-            this.NavigationService.Navigate(p3);
+            Welcome_Page p1 = new Welcome_Page();
+            this.NavigationService.Navigate(p1);
         }
     }
+
+
 }
+
