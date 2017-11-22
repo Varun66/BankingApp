@@ -31,8 +31,20 @@ namespace BankingApp
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            Welcome_Page p1 = new Welcome_Page();
+            WelcomePage p1 = new WelcomePage();
             this.NavigationService.Navigate(p1);
+        }
+
+        private void Checking_Click(object sender, RoutedEventArgs e)
+        {
+            ActionAccount p1 = new ActionAccount("Checking");
+            this.NavigationService.Navigate(p1);
+        }
+
+        private void Savings_Click(object sender, RoutedEventArgs e)
+        {
+            ActionAccount p2 = new ActionAccount("Savings");
+            this.NavigationService.Navigate(p2);
         }
     }
 }

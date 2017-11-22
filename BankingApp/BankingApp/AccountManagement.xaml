@@ -11,18 +11,25 @@
         <Grid.Background>
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
-        <TextBox HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Account Managment&#xD;&#xA;" VerticalAlignment="Top" Width="295" Margin="112,51,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
-        <Button x:Name="Checking" Content="Checking" HorizontalAlignment="Left" Margin="31,172,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold">
+        <TextBlock Height="39" TextWrapping="Wrap" Text="Account Managment&#xD;&#xA;" VerticalAlignment="Top" Margin="128,51,127.8,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
+        <Button x:Name="Checking" HorizontalAlignment="Left" Margin="31,172,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Click="Checking_Click" Background="#FFDDDDDD">
+            <StackPanel Orientation=" Horizontal">
+                <TextBlock Text="Checking"></TextBlock>
+            </StackPanel>
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="Savings" Content="Savings" HorizontalAlignment="Left" Margin="311,172,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" >
+        <Button x:Name="Savings" Content="Savings" HorizontalAlignment="Left" Margin="311,172,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Background="#FFDDDDDD" Click="Savings_Click" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="202,267,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="202,267,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="Exit" Padding="0,8,10,0" TextAlignment="Center"></TextBlock>
+                <Image Source="exit.png"></Image>
+            </StackPanel>
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

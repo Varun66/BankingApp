@@ -11,8 +11,8 @@
         <Grid.Background>
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
-        <TextBox HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Welcome to PIaVE Bank" VerticalAlignment="Top" Width="295" Margin="114,127,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
-        <Button x:Name="Insert_Card_U1_Pass" Content="Insert Card User 1 Pass" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="109" Height="29" FontSize="9" FontWeight="Bold" Click="Insert_Card_U1_Pass_Click">
+        <TextBlock Height="39" TextWrapping="Wrap" VerticalAlignment="Top" Margin="115,76,113.8,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"><Run Text="Welcome to PIAV"/><Run Text="E Bank"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <Button x:Name="Insert_Card_U1_Pass" Content="Insert Card User 1 Pass" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Width="111" Height="29" FontSize="9" FontWeight="Bold" Click="Insert_Card_U1_Pass_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -32,5 +32,8 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="251,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Margin="97,199,98.8,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Foreground="#FFF9F9F9" FontFamily="Microsoft YaHei" FontWeight="Bold"><Run Text="Please "/><Run Text="Insert "/><Run Text="Your "/><Run Text="Card"/><Run Text="  To Proceed"/><LineBreak/></TextBlock>
+        <Image HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="63" Margin="237,122,0,0" Source="piggy.png" />
     </Grid>
 </Page>

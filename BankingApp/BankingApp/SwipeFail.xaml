@@ -11,13 +11,13 @@
         <Grid.Background>
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
-        <TextBox x:Name="textbox_pin" HorizontalAlignment="Left" Height="39" Text="Enter Pin" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Margin="202,52,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White" MaxLength="4" MaxLines="1"/>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="202,281,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+        <TextBox x:Name="textbox_pin" HorizontalAlignment="Left" Height="39" Text="Enter Pin" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Margin="202,48,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White" MaxLength="4" MaxLines="1"/>
+        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="215,276,0,0" VerticalAlignment="Top" Width="101" Height="52" FontSize="9" FontWeight="Bold" Click="Exit_Click" RenderTransformOrigin="0.559,0.259" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Grid HorizontalAlignment="Left" Height="157" Margin="133,105,0,0" VerticalAlignment="Top" Width="279">
+        <Grid HorizontalAlignment="Left" Height="157" Margin="133,102,0,0" VerticalAlignment="Top" Width="279">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -31,56 +31,56 @@
                 <ColumnDefinition Width="78*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0" Grid.Row="0">
-                <Button Margin="0,0,0,0.2" ClickMode="Press" Click="Button_click">1</Button>
+                <Button Margin="0,0,1,0" ClickMode="Press" Click="Button_click" FontWeight="SemiBold">1</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="0">
-                <Button ClickMode="Press" Click="Button_click">2</Button>
+                <Button ClickMode="Press" Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">2</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="0">
-                <Button Height="39" Margin="0,0,-0.2,0" VerticalAlignment="Top" ClickMode="Press" Click="Button_click">3</Button>
+                <Button Height="39.2" Margin="0,0,1,0" VerticalAlignment="Top" ClickMode="Press" Click="Button_click" FontWeight="SemiBold">3</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="0">
-                <Button Background="#FFE81818" FontWeight="Bold" Click="Cancel_click">Cancel</Button>
+                <Button Background="#FFE81818" FontWeight="Bold" Click="Cancel_click" Margin="0,0,1,0">Cancel</Button>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="1">
-                <Button Height="39" Margin="0,0,0,0.2" VerticalAlignment="Bottom" Click="Button_click">4</Button>
+                <Button Height="39" Margin="0,0,1,0" VerticalAlignment="Bottom" Click="Button_click" FontWeight="SemiBold">4</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="1">
-                <Button Click="Button_click">5</Button>
+                <Button Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">5</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="1">
-                <Button ClickMode="Press" Click="Button_click">6</Button>
+                <Button ClickMode="Press" Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">6</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="1">
-                <Button Background="#FFEBF413" FontWeight="Bold" Click="Correction_click">Correction</Button>
+                <Button Background="#FFEBF413" FontWeight="Bold" Click="Correction_click" Margin="0,0,1,0">Correction</Button>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="2">
-                <Button ClickMode="Press" Click="Button_click">7</Button>
+                <Button ClickMode="Press" Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">7</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="2">
-                <Button Click="Button_click">8</Button>
+                <Button Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">8</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="2">
-                <Button ClickMode="Press" Click="Button_click">9</Button>
+                <Button ClickMode="Press" Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">9</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="23*"/>
                     <ColumnDefinition Width="16*"/>
                 </Grid.ColumnDefinitions>
-                <Button IsEnabled="false" Grid.ColumnSpan="2" Margin="0,0,0.4,0.2" BorderBrush="#FFDDDDDD" Background="#FF919191"></Button>
+                <Button IsEnabled="false" Grid.ColumnSpan="2" Margin="0,0,1,0.2" BorderBrush="#FFDDDDDD" Background="#FF919191"></Button>
             </Grid>
             <Grid Grid.Column="0" Grid.Row="3">
-                <Button Click="Button_click">*</Button>
+                <Button Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">*</Button>
             </Grid>
             <Grid Grid.Column="1" Grid.Row="3">
-                <Button Click="Button_click">0</Button>
+                <Button Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">0</Button>
             </Grid>
             <Grid Grid.Column="2" Grid.Row="3">
-                <Button ClickMode="Press" Click="Button_click">#</Button>
+                <Button ClickMode="Press" Click="Button_click" FontWeight="SemiBold" Margin="0,0,1,0">#</Button>
             </Grid>
             <Grid Grid.Column="3" Grid.Row="3">
-                <Button Background="#FF5CDA23" FontWeight="Bold" ClickMode="Press" Click="Confirm_click">Confirm</Button>
+                <Button Background="#FF5CDA23" FontWeight="Bold" ClickMode="Press" Click="Confirm_click" Margin="0,0,1,0">Confirm</Button>
             </Grid>
         </Grid>
     </Grid>

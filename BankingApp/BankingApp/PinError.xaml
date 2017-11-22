@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
-        <TextBox HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="Error: Pin Input Incorrect&#xD;&#xA;" VerticalAlignment="Top" Width="315" Margin="110,51,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
+        <TextBlock Height="39" TextWrapping="Wrap" Text="Error: Pin Input Incorrect&#xD;&#xA;" VerticalAlignment="Top" Margin="109,51,109.8,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
         <Button Content="Try Again" HorizontalAlignment="Left" Margin="207,152,0,0" VerticalAlignment="Top" Width="101" Height="52" Click="Return_click"/>
         <Button Content="Exit" HorizontalAlignment="Left" Margin="207,226,0,0" VerticalAlignment="Top" Width="101" Height="52" Click="Exit_click"/>
     </Grid>
