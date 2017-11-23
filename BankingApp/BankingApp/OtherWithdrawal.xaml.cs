@@ -76,7 +76,7 @@ namespace BankingApp
 
             }
 
-            else if (this.type.Equals("Savings") && Int32.Parse(textbox_pin.Text) <= 5000)
+            else if (this.type.Equals("Savings") && Int32.Parse(textbox_pin.Text) > 0)
             {
                 int current = this.acc.CheckingTotal;
 
