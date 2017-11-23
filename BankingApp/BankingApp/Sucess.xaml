@@ -5,15 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BankingApp"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="350" d:DesignWidth="525"
       Title="Sucess">
    
 
     <Grid>
-        <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         <Grid.Background>
-            <ImageBrush ImageSource="background_blue.png"/>
+            <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
+        <TextBlock Height="70" TextWrapping="Wrap" VerticalAlignment="Top" Margin="109,51,109.8,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White" TextAlignment="Center"><Run Text="Your Transaction "/><Run Text="Is Completed"/></TextBlock>
+        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="395,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="LogOut" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="exit.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="Back"  HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Back_Click"  >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="Back" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="reply.png"/>
+            </StackPanel>
+        </Button>
 
     </Grid>
 </Page>

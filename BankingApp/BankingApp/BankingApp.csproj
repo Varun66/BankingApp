@@ -72,6 +72,9 @@
     <Compile Include="GoHome.xaml.cs">
       <DependentUpon>GoHome.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InsuffFunds.xaml.cs">
+      <DependentUpon>InsuffFunds.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Other_Withdraw.xaml.cs">
       <DependentUpon>Other_Withdraw.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,9 @@
       <DependentUpon>PinError.xaml</DependentUpon>
     </Compile>
     <Compile Include="Account.cs" />
+    <Compile Include="Sucess.xaml.cs">
+      <DependentUpon>Sucess.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SwipeFail.xaml.cs">
       <DependentUpon>SwipeFail.xaml</DependentUpon>
     </Compile>
@@ -111,6 +117,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InsuffFunds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -131,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PinError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sucess.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
