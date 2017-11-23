@@ -194,7 +194,8 @@ namespace BankingApp
 
         private void Other_Click(object sender, RoutedEventArgs e)
         {
-
+            OtherWithdrawal p5 = new OtherWithdrawal(this.type, this.acc);
+            this.NavigationService.Navigate(p5);
         }
     }
 }

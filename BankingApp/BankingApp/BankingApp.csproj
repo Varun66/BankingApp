@@ -63,17 +63,29 @@
     <Compile Include="ActionAccount.xaml.cs">
       <DependentUpon>ActionAccount.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CashorCheque.xaml.cs">
+      <DependentUpon>CashorCheque.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CheckBalance.xaml.cs">
       <DependentUpon>CheckBalance.xaml</DependentUpon>
     </Compile>
     <Compile Include="Deposits.xaml.cs">
       <DependentUpon>Deposits.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExceedLimit.xaml.cs">
+      <DependentUpon>ExceedLimit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InsuffFunds.xaml.cs">
       <DependentUpon>InsuffFunds.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Other_Withdraw.xaml.cs">
-      <DependentUpon>Other_Withdraw.xaml</DependentUpon>
+    <Compile Include="OtherDeposit.xaml.cs">
+      <DependentUpon>OtherDeposit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OtherTransfer.xaml.cs">
+      <DependentUpon>OtherTransfer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OtherWithdrawal.xaml.cs">
+      <DependentUpon>OtherWithdrawal.xaml</DependentUpon>
     </Compile>
     <Compile Include="PinError.xaml.cs">
       <DependentUpon>PinError.xaml</DependentUpon>
@@ -102,11 +114,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CashorCheque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CheckBalance.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Deposits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExceedLimit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,7 +149,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Other_Withdraw.xaml">
+    <Page Include="OtherDeposit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OtherTransfer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OtherWithdrawal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

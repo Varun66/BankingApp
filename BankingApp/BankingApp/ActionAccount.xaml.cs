@@ -51,8 +51,8 @@ namespace BankingApp
 
         private void Transfers_click(object sender, RoutedEventArgs e)
         {
-          // Transfers p4 = new Transfers( this.type, this.acc);
-           // this.NavigationService.Navigate(p4);
+          Transfers p4 = new Transfers( this.type, this.acc);
+            this.NavigationService.Navigate(p4);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

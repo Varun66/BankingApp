@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BankingApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" WindowStyle="None">
+        Title="MainWindow" Height="350" Width="525">
     <Grid>
         
         <Frame x:Name="myFrame" Content="" NavigationUIVisibility="Hidden"/>
