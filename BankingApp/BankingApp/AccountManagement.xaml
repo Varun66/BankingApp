@@ -25,14 +25,23 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="202,267,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="395,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
             <StackPanel Orientation=" Horizontal" Margin="15,0">
-                <TextBlock Text="Exit" Padding="0,8,10,0" TextAlignment="Center"></TextBlock>
-                <Image Source="exit.png"></Image>
+                <TextBlock Text="LogOut" Padding="0,8,10,0" TextAlignment="Center"></TextBlock>
+                <Image Source="exit.png"/>
             </StackPanel>
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
+        </Button>
+        <Button x:Name="Back"  HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold"  >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="Back" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="reply.png"/>
+            </StackPanel>
         </Button>
     </Grid>
 

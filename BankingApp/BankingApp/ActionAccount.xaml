@@ -17,10 +17,23 @@
         <Button Content="Transfers" HorizontalAlignment="Left" Margin="289,212,0,0" VerticalAlignment="Top" Width="87" Height="43" Click="Transfers_click"/>
         <Button Content="Withdrawal" HorizontalAlignment="Left" Margin="140,122,0,0" VerticalAlignment="Top" Width="87" Height="43" Click="Withdrawal_click"/>
         <Button Content="Deposits" HorizontalAlignment="Left" Margin="289,122,0,0" VerticalAlignment="Top" Width="87" Height="43" Click="Deposits_click"/>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="193,288,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="395,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="LogOut" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="exit.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="Back"  HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold"  >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="Back" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="reply.png"/>
+            </StackPanel>
         </Button>
     </Grid>
 </Page>

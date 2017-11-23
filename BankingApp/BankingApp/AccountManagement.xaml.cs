@@ -37,6 +37,13 @@ namespace BankingApp
             this.NavigationService.Navigate(p1);
         }
 
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            WelcomePage p1 = new WelcomePage();
+            this.NavigationService.Navigate(p1);
+        }
+
+
         private void Checking_Click(object sender, RoutedEventArgs e)
         {
             ActionAccount p1 = new ActionAccount("Checking");
@@ -45,6 +52,7 @@ namespace BankingApp
 
         private void Savings_Click(object sender, RoutedEventArgs e)
         {
+
             ActionAccount p2 = new ActionAccount("Savings");
             this.NavigationService.Navigate(p2);
         }

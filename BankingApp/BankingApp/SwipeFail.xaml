@@ -12,11 +12,6 @@
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
         <TextBox x:Name="textbox_pin" HorizontalAlignment="Left" Height="39" Text="Enter Pin" TextWrapping="Wrap"  VerticalAlignment="Top" Width="126" Margin="202,48,0,0" TextChanged="TextBox_TextChanged" FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White" MaxLength="4" MaxLines="1"/>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="215,276,0,0" VerticalAlignment="Top" Width="101" Height="52" FontSize="9" FontWeight="Bold" Click="Exit_Click" RenderTransformOrigin="0.559,0.259" >
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
         <Grid HorizontalAlignment="Left" Height="157" Margin="133,102,0,0" VerticalAlignment="Top" Width="279">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -83,5 +78,23 @@
                 <Button Background="#FF5CDA23" FontWeight="Bold" ClickMode="Press" Click="Confirm_click" Margin="0,0,1,0">Confirm</Button>
             </Grid>
         </Grid>
+        <Button x:Name="Back"  HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold"  >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="Back" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="reply.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="395,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="LogOut" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="exit.png"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>
