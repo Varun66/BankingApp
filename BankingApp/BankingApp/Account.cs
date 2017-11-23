@@ -66,6 +66,20 @@ namespace BankingApp
             }
           
         }
+        public List<string> CheckingBalance
+        {
+            get
+            {
+                return checkingBalance;
+            }
+        }
+        public List<string> SavingsBalance
+        {
+            get
+            {
+                return savingsBalance;
+            }
+        }
 
 
 

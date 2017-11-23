@@ -45,8 +45,8 @@ namespace BankingApp
 
         private void Check_click(object sender, RoutedEventArgs e)
         {
-           // CheckBalance p3 = new CheckBalance(this.type,  this.acc);
-            //this.NavigationService.Navigate(p3);
+            CheckBalance p3 = new CheckBalance(this.type,  this.acc);
+            this.NavigationService.Navigate(p3);
         }
 
         private void Transfers_click(object sender, RoutedEventArgs e)

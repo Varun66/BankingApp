@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush Stretch="None" ImageSource="background_blue.png" />
         </Grid.Background>
-        <TextBlock Height="39" TextWrapping="Wrap" Text="Current Balance: &#xD;&#xA;" VerticalAlignment="Top" Margin="143,51,112.333,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
+        <TextBlock Height="39" TextWrapping="Wrap" Text="Current Balance: &#xD;&#xA;" VerticalAlignment="Top" Margin="161,33,161.8,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
         <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="395,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
             <Button.Effect>
                 <DropShadowEffect/>
@@ -30,5 +30,14 @@
                 <Image Source="reply.png"/>
             </StackPanel>
         </Button>
+        <ListBox x:Name="listBox" Height="194" VerticalAlignment="Top" Margin="118,89,119.8,0" SelectionChanged="ListBox_SelectionChanged" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderThickness="0,0,0,2" BorderBrush="Black">
+                        <Label Content="{Binding}"/>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>

@@ -20,9 +20,43 @@ namespace BankingApp
     /// </summary>
     public partial class CheckBalance : Page
     {
-        public CheckBalance()
+        string type;
+        Account acc;
+
+        public CheckBalance(string type, Account acc)
         {
+            this.type = type;
+            this.acc = acc;
             InitializeComponent();
+            if (type.Equals("Checking"))
+            {
+                listBox.Items.Add("TOTAL:" + this.acc.CheckingTotal.ToString());
+                foreach (string item in this.acc.CheckingBalance)
+                {
+                    listBox.Items.Add(item);
+                }
+             
+                
+
+            }
+            else
+            {
+
+                listBox.Items.Add("TOTAL:" + this.acc.SavingsTotal.ToString());
+                foreach (string item in this.acc.SavingsBalance)
+                {
+                    listBox.Items.Add(item);
+                }
+            }
+            for (int i = 0; i < listBox.Items.Count / 2; i++)
+            {
+                var tmp = listBox.Items[i];
+                listBox.Items[i] = listBox.Items[listBox.Items.Count - i - 1];
+                listBox.Items[listBox.Items.Count - i - 1] = tmp;
+            }
+
+
+
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -33,8 +67,13 @@ namespace BankingApp
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-           // ActionAccount p2 = new ActionAccount("Checking",);
-           // this.NavigationService.Navigate(p2);
+           ActionAccount p2 = new ActionAccount(this.type,this.acc);
+           this.NavigationService.Navigate(p2);
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }
