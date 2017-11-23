@@ -16,15 +16,19 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for CheckBalance.xaml
+    /// Interaction logic for InsuffFunds.xaml
     /// </summary>
-    public partial class CheckBalance : Page
+    public partial class InsuffFunds : Page
     {
-        public CheckBalance()
+        Account acc;
+        string type;
+        public InsuffFunds(string type, Account acc)
         {
+            this.type = type;
+            this.acc = acc;
+
             InitializeComponent();
         }
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             WelcomePage p1 = new WelcomePage();
@@ -33,8 +37,8 @@ namespace BankingApp
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-           // ActionAccount p2 = new ActionAccount("Checking",);
-           // this.NavigationService.Navigate(p2);
+            ActionAccount p2 = new ActionAccount(this.type, this.acc);
+            this.NavigationService.Navigate(p2);
         }
     }
 }

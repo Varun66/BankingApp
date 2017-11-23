@@ -46,14 +46,14 @@ namespace BankingApp
 
         private void Checking_Click(object sender, RoutedEventArgs e)
         {
-            ActionAccount p1 = new ActionAccount("Checking");
+            ActionAccount p1 = new ActionAccount("Checking", this.acc);
             this.NavigationService.Navigate(p1);
         }
 
         private void Savings_Click(object sender, RoutedEventArgs e)
         {
 
-            ActionAccount p2 = new ActionAccount("Savings");
+            ActionAccount p2 = new ActionAccount("Savings", this.acc);
             this.NavigationService.Navigate(p2);
         }
     }

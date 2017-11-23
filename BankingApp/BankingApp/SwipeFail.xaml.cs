@@ -66,12 +66,12 @@ namespace BankingApp
         {
             if (textbox_pin.Text.Equals(this.acc.Pin))
             {
-                AccountManagement p1 = new AccountManagement();
+                AccountManagement p1 = new AccountManagement(this.acc);
                 this.NavigationService.Navigate(p1);
             }
             else
             {
-                PinError p2 = new PinError(acc);
+                PinError p2 = new PinError(this.acc);
                 this.NavigationService.Navigate(p2);
             }
         }

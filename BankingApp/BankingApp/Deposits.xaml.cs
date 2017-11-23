@@ -58,8 +58,8 @@ namespace BankingApp
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            ActionAccount p2 = new ActionAccount("Checking");
-            this.NavigationService.Navigate(p2);
+           // ActionAccount p2 = new ActionAccount("Checking");
+            //this.NavigationService.Navigate(p2);
         }
     }
 }

@@ -20,10 +20,12 @@ namespace BankingApp
     /// </summary>
     public partial class ActionAccount : Page
     {
+        Account acc;
         string type;
-        public ActionAccount(string type)
+        public ActionAccount(string type, Account acc)
         {
             this.type = type;
+            this.acc = acc;
             InitializeComponent();
 
         }
@@ -31,31 +33,37 @@ namespace BankingApp
 
         private void Withdrawal_click(object sender, RoutedEventArgs e)
         {
-           Withdrawal p1 = new Withdrawal();
+           Withdrawal p1 = new Withdrawal(this.type, this.acc);
             this.NavigationService.Navigate(p1);
         }
 
         private void Deposits_click(object sender, RoutedEventArgs e)
         {
-           Deposits p2 = new Deposits();
-            this.NavigationService.Navigate(p2);
+           //Deposits p2 = new Deposits(this.type, this.acc);
+           // this.NavigationService.Navigate(p2);
         }
 
         private void Check_click(object sender, RoutedEventArgs e)
         {
-            CheckBalance p3 = new CheckBalance();
-            this.NavigationService.Navigate(p3);
+           // CheckBalance p3 = new CheckBalance(this.type,  this.acc);
+            //this.NavigationService.Navigate(p3);
         }
 
         private void Transfers_click(object sender, RoutedEventArgs e)
         {
-           Transfers p4 = new Transfers();
-            this.NavigationService.Navigate(p4);
+          // Transfers p4 = new Transfers( this.type, this.acc);
+           // this.NavigationService.Navigate(p4);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             WelcomePage p5 = new WelcomePage();
             this.NavigationService.Navigate(p5);
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            AccountManagement p6 = new AccountManagement(this.acc);
+            this.NavigationService.Navigate(p6);
         }
     }
 }

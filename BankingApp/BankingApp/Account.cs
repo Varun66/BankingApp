@@ -26,11 +26,11 @@ namespace BankingApp
         }
         public void changeBalance(string statement, string type)
         {
-            if (type.Equals("checking"))
+            if (type.Equals("Checking"))
             {
                 checkingBalance.Add(statement);
             }
-            else if (type.Equals("savings"))
+            else if (type.Equals("Savings"))
             {
                 savingsBalance.Add(statement);
             }
