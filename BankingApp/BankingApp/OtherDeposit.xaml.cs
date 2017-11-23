@@ -16,20 +16,16 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for SwipeFail.xaml
+    /// Interaction logic for OtherDeposit.xaml
     /// </summary>
-    public partial class SwipeFail : Page
+    public partial class OtherDeposit : Page
     {
+        string type;
+        Account acc;
         int size;
-        public Account acc;
-        public SwipeFail()
+        public OtherDeposit(string type, Account acc)
         {
-            
-            InitializeComponent();
-            size = 0;
-        }
-        public SwipeFail(Account acc)
-        {
+            this.type = type;
             this.acc = acc;
             InitializeComponent();
             size = 0;
@@ -38,19 +34,23 @@ namespace BankingApp
         {
             e.Handled = true;
         }
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             WelcomePage p1 = new WelcomePage();
             this.NavigationService.Navigate(p1);
         }
 
+        private void Back_Click_1(object sender, RoutedEventArgs e)
+        {
+            ActionAccount p2 = new ActionAccount(this.type, this.acc);
+            this.NavigationService.Navigate(p2);
+        }
         private void Button_click(object sender, RoutedEventArgs e)
         {
-           
+
             Button button = (Button)sender;
-            
-           if (size < 4)
+
+            if (size < 4)
             {
                 if (size == 0)
                 {
@@ -59,19 +59,38 @@ namespace BankingApp
                 textbox_pin.Text = textbox_pin.Text + button.Content;
                 size++;
             }
-           
+
         }
 
         private void Confirm_click(object sender, RoutedEventArgs e)
         {
-            if (textbox_pin.Text.Equals(this.acc.Pin))
+            if (this.type.Equals("Checking")  && Int32.Parse(textbox_pin.Text) <= 5000)
             {
-                AccountManagement p1 = new AccountManagement(this.acc);
-                this.NavigationService.Navigate(p1);
+                int current = this.acc.CheckingTotal;
+
+                this.acc.CheckingTotal = current + Int32.Parse(textbox_pin.Text);
+                this.acc.changeBalance("Deposit of " + textbox_pin.Text + " $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+
             }
-            else
+
+            else if (this.type.Equals("Savings") && Int32.Parse(textbox_pin.Text) <= 5000)
             {
-                PinError p2 = new PinError(this.acc);
+                int current = this.acc.CheckingTotal;
+
+                this.acc.CheckingTotal = current + Int32.Parse(textbox_pin.Text);
+                this.acc.changeBalance("Deposit of " + textbox_pin.Text + " $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+
+            }
+
+            else if(Int32.Parse(textbox_pin.Text) > 5000)
+            {
+                ExceedLimit p2 = new ExceedLimit(this.type,this.acc);
                 this.NavigationService.Navigate(p2);
             }
         }
@@ -90,14 +109,5 @@ namespace BankingApp
             textbox_pin.Text = String.Empty;
             size = 0;
         }
-
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            WelcomePage p1 = new WelcomePage();
-            this.NavigationService.Navigate(p1);
-        }
     }
-
-
 }
-

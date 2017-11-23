@@ -39,8 +39,8 @@ namespace BankingApp
 
         private void Deposits_click(object sender, RoutedEventArgs e)
         {
-           //Deposits p2 = new Deposits(this.type, this.acc);
-           // this.NavigationService.Navigate(p2);
+           CashorCheque p2 = new CashorCheque(this.type, this.acc);
+           this.NavigationService.Navigate(p2);
         }
 
         private void Check_click(object sender, RoutedEventArgs e)

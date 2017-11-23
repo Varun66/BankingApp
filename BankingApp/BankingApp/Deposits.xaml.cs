@@ -18,36 +18,128 @@ namespace BankingApp
     /// <summary>
     /// Interaction logic for Deposits.xaml
     /// </summary>
+
     public partial class Deposits : Page
     {
-        public Deposits()
+        string type;
+        Account acc;
+        public Deposits(string type, Account acc)
         {
+            this.type = type;
+            this.acc = acc;
             InitializeComponent();
         }
 
         private void twenty_Click(object sender, RoutedEventArgs e)
         {
+            if (this.type.Equals("Checking"))
+            {
+                int current = this.acc.CheckingTotal;
+
+                    this.acc.CheckingTotal = current + 20;
+                    this.acc.changeBalance("Deposit of 20 $CAD", this.type);
+                    Sucess p3 = new Sucess(this.type, this.acc);
+                    this.NavigationService.Navigate(p3);
+                
+
+            }
+            else if (this.type.Equals("Savings"))
+            {
+                int current = this.acc.SavingsTotal;
+                
+                
+                    this.acc.SavingsTotal = current + 20;
+                    this.acc.changeBalance("Deposit of 20 $CAD", this.type);
+                    Sucess p3 = new Sucess(this.type, this.acc);
+                    this.NavigationService.Navigate(p3);
+                
+            }
+
 
         }
 
         private void hundred_Click(object sender, RoutedEventArgs e)
         {
+            if (this.type.Equals("Checking"))
+            {
+                int current = this.acc.CheckingTotal;
 
+                this.acc.CheckingTotal = current + 100;
+                this.acc.changeBalance("Deposit of 100 $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+
+            }
+            else if (this.type.Equals("Savings"))
+            {
+                int current = this.acc.SavingsTotal;
+
+
+                this.acc.SavingsTotal = current + 100;
+                this.acc.changeBalance("Deposit of 100 $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+            }
         }
 
         private void fifty_Click(object sender, RoutedEventArgs e)
         {
+            if (this.type.Equals("Checking"))
+            {
+                int current = this.acc.CheckingTotal;
 
+                this.acc.CheckingTotal = current + 50;
+                this.acc.changeBalance("Deposit of 50 $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+
+            }
+            else if (this.type.Equals("Savings"))
+            {
+                int current = this.acc.SavingsTotal;
+
+
+                this.acc.SavingsTotal = current + 50;
+                this.acc.changeBalance("Deposit of 50 $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+            }
         }
 
         private void twohundred_Click(object sender, RoutedEventArgs e)
         {
+            if (this.type.Equals("Checking"))
+            {
+                int current = this.acc.CheckingTotal;
 
+                this.acc.CheckingTotal = current + 200;
+                this.acc.changeBalance("Deposit of 200 $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+
+            }
+            else if (this.type.Equals("Savings"))
+            {
+                int current = this.acc.SavingsTotal;
+
+
+                this.acc.SavingsTotal = current + 200;
+                this.acc.changeBalance("Deposit of 200 $CAD", this.type);
+                Sucess p3 = new Sucess(this.type, this.acc);
+                this.NavigationService.Navigate(p3);
+
+            }
         }
 
         private void Other_Click(object sender, RoutedEventArgs e)
         {
-
+            OtherDeposit p4 = new OtherDeposit(this.type, this.acc);
+            this.NavigationService.Navigate(p4);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -58,8 +150,8 @@ namespace BankingApp
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-           // ActionAccount p2 = new ActionAccount("Checking");
-            //this.NavigationService.Navigate(p2);
+            ActionAccount p2 = new ActionAccount(this.type, this.acc);
+            this.NavigationService.Navigate(p2);
         }
     }
 }
