@@ -64,7 +64,7 @@ namespace BankingApp
 
         private void Confirm_click(object sender, RoutedEventArgs e)
         {
-            if (this.type.Equals("Checking")  && Int32.Parse(textbox_pin.Text) <= 5000)
+            if (this.type.Equals("Checking")  && this.acc.CheckingTotal+Int32.Parse(textbox_pin.Text) <= 5000)
             {
                 int current = this.acc.CheckingTotal;
 
@@ -76,11 +76,11 @@ namespace BankingApp
 
             }
 
-            else if (this.type.Equals("Savings") && Int32.Parse(textbox_pin.Text) <= 5000)
+            else if (this.type.Equals("Savings") && this.acc.SavingsTotal+Int32.Parse(textbox_pin.Text) <= 5000)
             {
-                int current = this.acc.CheckingTotal;
+                int current = this.acc.SavingsTotal;
 
-                this.acc.CheckingTotal = current + Int32.Parse(textbox_pin.Text);
+                this.acc.SavingsTotal = current + Int32.Parse(textbox_pin.Text);
                 this.acc.changeBalance("Deposit of " + textbox_pin.Text + " $CAD", this.type);
                 Sucess p3 = new Sucess(this.type, this.acc);
                 this.NavigationService.Navigate(p3);
@@ -88,7 +88,7 @@ namespace BankingApp
 
             }
 
-            else if(Int32.Parse(textbox_pin.Text) > 5000)
+            else
             {
                 ExceedLimit p2 = new ExceedLimit(this.type,this.acc);
                 this.NavigationService.Navigate(p2);
