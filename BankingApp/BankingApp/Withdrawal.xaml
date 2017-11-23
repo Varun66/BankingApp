@@ -5,10 +5,69 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BankingApp"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="Withdrawal">
+      Title="Withdrawal" Height="350" Width="525">
 
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="background_blue.png" />
+        </Grid.Background>
+        <TextBlock Height="39" TextWrapping="Wrap" Text="Withdraw Amount&#xD;&#xA;" VerticalAlignment="Top" Margin="143,51,112.333,0"  FontFamily="Microsoft YaHei" FontSize="24" OpacityMask="Black" Background="{x:Null}" FontWeight="ExtraBold" Foreground="White"/>
+        <Button x:Name="twenty" HorizontalAlignment="Left" Margin="28,95,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Click="twenty_Click" Background="#FFDDDDDD">
+            <StackPanel Orientation=" Horizontal">
+                <TextBlock Text="$20"></TextBlock>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="onehundred" Content="$100" HorizontalAlignment="Left" Margin="300,95,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Background="#FFDDDDDD" Click="hundred_Click" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="Exit"  HorizontalAlignment="Left" Margin="395,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Exit_Click" >
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="LogOut" Padding="0,8,10,0" TextAlignment="Center"></TextBlock>
+                <Image Source="exit.png"/>
+            </StackPanel>
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="Back"  HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="120" Height="32" FontSize="9" FontWeight="Bold" Click="Back_Click"  >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal" Margin="15,0">
+                <TextBlock Text="Back" Padding="0,8,10,0" TextAlignment="Center"/>
+                <Image Source="reply.png"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="fifty" HorizontalAlignment="Left" Margin="28,174,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Click="fifty_Click" Background="#FFDDDDDD">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal">
+                <TextBlock Text="$50"/>
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="twohundred" HorizontalAlignment="Left" Margin="300,174,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Click="twohundred_Click" Background="#FFDDDDDD">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal">
+                <TextBlock Text="$200"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="Other" HorizontalAlignment="Left" Margin="164,247,0,0" VerticalAlignment="Top" Width="182" Height="48" FontWeight="Bold" Click="Other_Click" Background="#FFDDDDDD">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <StackPanel Orientation=" Horizontal">
+                <TextBlock Text="Other"/>
+            </StackPanel>
+        </Button>
     </Grid>
+
 </Page>

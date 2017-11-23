@@ -70,8 +70,11 @@ namespace BankingApp
 
         private void Correction_click(object sender, RoutedEventArgs e)
         {
-            textbox_pin.Text = textbox_pin.Text.Remove(size-1);
-            size--;
+            if (size != 0)
+            {
+                textbox_pin.Text = textbox_pin.Text.Remove(size - 1);
+                size--;
+            }
         }
 
         private void Cancel_click(object sender, RoutedEventArgs e)

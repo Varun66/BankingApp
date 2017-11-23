@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace BankingApp
 {
     /// <summary>
-    /// Interaction logic for CheckBalance.xaml
+    /// Interaction logic for Other_Withdraw.xaml
     /// </summary>
-    public partial class CheckBalance : Page
+    public partial class Other_Withdraw : Page
     {
-        public CheckBalance()
+        public Other_Withdraw()
         {
             InitializeComponent();
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            WelcomePage p1 = new WelcomePage();
-            this.NavigationService.Navigate(p1);
-        }
-
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            ActionAccount p2 = new ActionAccount("Checking");
-            this.NavigationService.Navigate(p2);
         }
     }
 }

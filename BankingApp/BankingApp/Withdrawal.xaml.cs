@@ -20,9 +20,54 @@ namespace BankingApp
     /// </summary>
     public partial class Withdrawal : Page
     {
+        
         public Withdrawal()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            WelcomePage p1 = new WelcomePage();
+            this.NavigationService.Navigate(p1);
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            ActionAccount p2 = new ActionAccount("Checking");
+            this.NavigationService.Navigate(p2);
+        }
+
+        private void twenty_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void fifty_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void hundred_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void twohundred_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Other_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
