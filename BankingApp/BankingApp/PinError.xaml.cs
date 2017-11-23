@@ -20,8 +20,10 @@ namespace BankingApp
     /// </summary>
     public partial class PinError : Page
     {
-        public PinError()
+        Account acc;
+        public PinError(Account acc)
         {
+            this.acc = acc;
             InitializeComponent();
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -31,7 +33,7 @@ namespace BankingApp
 
         private void Return_click(object sender, RoutedEventArgs e)
         {
-            SwipeFail p1 = new SwipeFail();
+            SwipeFail p1 = new SwipeFail(acc);
             this.NavigationService.Navigate(p1);
         }
 

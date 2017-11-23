@@ -21,8 +21,16 @@ namespace BankingApp
     public partial class SwipeFail : Page
     {
         int size;
+        public Account acc;
         public SwipeFail()
         {
+            
+            InitializeComponent();
+            size = 0;
+        }
+        public SwipeFail(Account acc)
+        {
+            this.acc = acc;
             InitializeComponent();
             size = 0;
         }
@@ -56,14 +64,14 @@ namespace BankingApp
 
         private void Confirm_click(object sender, RoutedEventArgs e)
         {
-            if (textbox_pin.Text.Equals("1234"))
+            if (textbox_pin.Text.Equals(this.acc.Pin))
             {
                 AccountManagement p1 = new AccountManagement();
                 this.NavigationService.Navigate(p1);
             }
             else
             {
-                PinError p2 = new PinError();
+                PinError p2 = new PinError(acc);
                 this.NavigationService.Navigate(p2);
             }
         }

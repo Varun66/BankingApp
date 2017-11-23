@@ -20,8 +20,10 @@ namespace BankingApp
     /// </summary>
     public partial class AccountManagement : Page
     {
-        public AccountManagement()
+        Account acc;
+        public AccountManagement(Account acc)
         {
+            this.acc = acc;
             InitializeComponent();
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

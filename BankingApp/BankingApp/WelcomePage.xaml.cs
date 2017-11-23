@@ -25,14 +25,12 @@ namespace BankingApp
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+   
 
         private void Insert_Card_U1_Pass_Click(object sender, RoutedEventArgs e)
         {
-            AccountManagement p2 = new AccountManagement();
+            Account acc = new Account("1234");
+            AccountManagement p2 = new AccountManagement(acc);
             this.NavigationService.Navigate(p2);
             
             
@@ -40,7 +38,22 @@ namespace BankingApp
 
         private void Insert_Card_U1_Fail_Click(object sender, RoutedEventArgs e)
         {
-            SwipeFail p3 = new SwipeFail();
+            Account acc = new Account("1234");
+            SwipeFail p3 = new SwipeFail(acc);
+            this.NavigationService.Navigate(p3);
+        }
+
+        private void Insert_Card_U2_Pass_Click(object sender, RoutedEventArgs e)
+        {
+            Account acc = new Account("5678");
+            AccountManagement p2 = new AccountManagement(acc);
+            this.NavigationService.Navigate(p2);
+        }
+
+        private void Insert_Card_U2_Fail_Click(object sender, RoutedEventArgs e)
+        {
+            Account acc = new Account("5678");
+            SwipeFail p3 = new SwipeFail(acc);
             this.NavigationService.Navigate(p3);
         }
     }
